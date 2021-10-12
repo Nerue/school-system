@@ -1,0 +1,26 @@
+<h1 class="text-center p-5 text-danger"> Welcome List Student page</h1>
+<div class="container col-6">
+    <div class="card">
+        <div class="card-body">
+            <table class="table">
+                <tr>
+                    <th>id</th>
+                    <th>student name</th>
+                    <th>course name</th>
+                  
+                    <th colspan="2">action</th>
+                </tr>
+                <tr *ngFor="let teachers of allData">
+                    <th>{{teachers.id}} </th>
+                    <th>{{teachers.name}}</th>
+                    <th>{{teachers.class}}</th>
+                    
+                    <th><button (click)="remove(teachers.id)" class="btn btn-danger">delete</button> </th>
+                    <th><a routerLink="/pS/{{teachers.id}}" class="btn btn-info">view</a> </th>
+                    <th><a routerLink="/upS/{{teachers.id}}" class="btn btn-info">add</a></th>
+                    
+                </tr>
+            </table>
+    </div>
+</div>
+
